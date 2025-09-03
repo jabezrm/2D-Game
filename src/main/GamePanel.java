@@ -23,12 +23,14 @@ public class GamePanel extends JPanel implements Runnable{
     public AssetSetter setter = new AssetSetter(this);
     TileManager tm = new TileManager(this);
     Sound sound = new Sound();
+    Sound music = new Sound();
 
     int FPS = 60;
     public final int maxWorldCol = 50;
     public final int maxWorldRow = 50;
     public final int worldWidth = tileSize * maxWorldCol;
     public final int worldHeight = tileSize * maxWorldRow;
+    public UI ui = new UI(this);
 
     public GamePanel() {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
@@ -87,17 +89,18 @@ public class GamePanel extends JPanel implements Runnable{
             }
         }
         player.draw(g2);
+        ui.draw(g2);
         g2.dispose();
     }
 
     public void playMusic(int i) {
-        sound.setFile(i);
-        sound.play();
-        sound.loop();
+        music.setFile(i);
+        music.play();
+        music.loop();
     }
 
     public void stopMusic() {
-        sound.stop();
+        music.stop();
     }
 
     public void playSE(int i) {
