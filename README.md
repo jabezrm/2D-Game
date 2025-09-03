@@ -14,3 +14,13 @@ This project demonstrates object-oriented design, event handling, and rendering 
 - Handling keyboard input and events
 - Implementing collision detection
 - Organizing code with OOP and clean design
+  
+## Gameplay
+<div align="center">
+  <img src="./screenshots/gamestart.png" width="45%" />
+  <img src="./screenshots/key.png" width="45%" />
+</div>
+
+<div align="center">
+  <img src="./screenshots/endgame.png" width="45%" />
+</div>
