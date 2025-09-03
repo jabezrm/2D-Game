@@ -22,6 +22,7 @@ public class GamePanel extends JPanel implements Runnable{
     public SuperObject obj[] = new SuperObject[10];
     public AssetSetter setter = new AssetSetter(this);
     TileManager tm = new TileManager(this);
+    Sound sound = new Sound();
 
     int FPS = 60;
     public final int maxWorldCol = 50;
@@ -40,6 +41,7 @@ public class GamePanel extends JPanel implements Runnable{
 
     public void setUpGame() {
         setter.setObject();
+        playMusic(0);
     }
 
     public void startGameThread() {
@@ -84,9 +86,22 @@ public class GamePanel extends JPanel implements Runnable{
                 obj[i].draw(g2, this);
             }
         }
-
         player.draw(g2);
-
         g2.dispose();
+    }
+
+    public void playMusic(int i) {
+        sound.setFile(i);
+        sound.play();
+        sound.loop();
+    }
+
+    public void stopMusic() {
+        sound.stop();
+    }
+
+    public void playSE(int i) {
+        sound.setFile(i);
+        sound.play();
     }
 }
