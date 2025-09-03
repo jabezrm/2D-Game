@@ -1,4 +1,4 @@
-# 2D Game in Java by Ryisnow
+# 2D Game in Java by [Ryisnow](https://www.youtube.com/@RyiSnow)
 A simple yet engaging 2D game built entirely in Java — no external frameworks or libraries, just pure Java code.
 This project demonstrates object-oriented design, event handling, and rendering logic while keeping dependencies minimal.
 
@@ -25,5 +25,3 @@ This project demonstrates object-oriented design, event handling, and rendering 
   <img src="./screenshots/endgame.png" width="45%" />
 </div>
 
-
-Tutorial Credits: https://www.youtube.com/@RyiSnow
